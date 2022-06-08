@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\Acer Nitro 5\eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3843746929.index
+\Hello JSP\src\main\java
+C:\Users\Acer Nitro 5\eclipse\JavaEE\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3843746929.index
+\Hello JSP\src\main\java
