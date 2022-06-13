@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <title>Agenda de contatos</title>
-<link rel="icon" href="imagens/favicon.png">
+<link rel="icon" href="imagens/phone.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
