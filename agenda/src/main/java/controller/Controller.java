@@ -80,6 +80,15 @@ public class Controller extends HttpServlet {
 		protected void listarContato(HttpServletRequest request, HttpServletResponse response) {
 			//Recebimento do id do contato que será editado	
 			String idcon = request.getParameter("idcon");
-			System.out.println(idcon);	
+			//Teste de recebimento
+			//System.out.println(idcon);	
+			contato.setIdcon(idcon);
+			//Executar o método selecionarContato da classe DAO
+			dao.selecionarContato(contato);
+			//Teste de recebimento
+			System.out.println(contato.getIdcon());
+			System.out.println(contato.getNome());
+			System.out.println(contato.getFone());
+			System.out.println(contato.getEmail());
 		}
 }
