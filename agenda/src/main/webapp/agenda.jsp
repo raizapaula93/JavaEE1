@@ -43,6 +43,8 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>)request.getAttribute("contato
 				<td>
 					<a href="select?idcon=<%=lista.get(i).getIdcon() %>"
 					class="Botao1">Editar</a>
+					<a href="javascript: confirmar(<%=lista.get(i).getIdcon() %>)"
+					class="Botao2">Excluir</a>
 			</td>		
 		</tr>
 		<% 
@@ -50,5 +52,6 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>)request.getAttribute("contato
 		%>
 	</tbody>
 	</table>
+	<script src="scripts/confirmador.js"></script>
 </body>
 </html>
