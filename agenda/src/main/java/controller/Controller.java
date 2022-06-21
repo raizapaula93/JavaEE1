@@ -77,7 +77,8 @@ public class Controller extends HttpServlet {
 			response.sendRedirect("main");
 		}
 	//Editar Contato	
-		protected void listarContato(HttpServletRequest request, HttpServletResponse response) {
+		protected void listarContato(HttpServletRequest request, HttpServletResponse response)
+				throws ServletException, IOException	{
 			//Recebimento do id do contato que será editado	
 			String idcon = request.getParameter("idcon");
 			//Teste de recebimento
@@ -85,10 +86,18 @@ public class Controller extends HttpServlet {
 			contato.setIdcon(idcon);
 			//Executar o método selecionarContato da classe DAO
 			dao.selecionarContato(contato);
-			//Teste de recebimento
-			System.out.println(contato.getIdcon());
-			System.out.println(contato.getNome());
-			System.out.println(contato.getFone());
-			System.out.println(contato.getEmail());
+//			//Teste de recebimento
+//			System.out.println(contato.getIdcon());
+//			System.out.println(contato.getNome());
+//			System.out.println(contato.getFone());
+//			System.out.println(contato.getEmail());
+			//Setar os atributos do formulário com o conteúdo JavaBeans
+			request.setAttribute("idcon", contato.getIdcon());
+			request.setAttribute("nome", contato.getNome());
+			request.setAttribute("fone", contato.getFone());
+			request.setAttribute("email", contato.getEmail());
+			//Encaminhar ao documento editar.jsp
+			RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
+			rd.forward(request, response);
 		}
 }
